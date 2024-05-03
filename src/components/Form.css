@@ -1,0 +1,270 @@
+form button {
+    width: 150px;
+    height: 55px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    background: var(--light-blue);
+    color: var(--color-white);
+}
+form button:active {
+    background: var(--dark-blue);
+}
+
+form .personal-info {
+    display: flex;
+    flex-direction: column;
+}
+form .personal-info .sub-topic {
+    color: var(--color-white);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+form .personal-info .sub-topic p {
+    color: #ffffff8c;
+    margin-bottom: 1rem;
+    font-size: 15px;
+}
+form .personal-info .sub-topic h1 {
+    font-size: 23px;
+}
+
+
+form .name .input-field {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: var(--color-white);
+    color: var(--dark-blue);
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+}
+form .addresses .input-field {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: var(--color-white);
+    color: var(--dark-blue);
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+}
+form .num .input-field {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: var(--color-white);
+    color: var(--dark-blue);
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+}
+
+
+
+
+/* File input */
+form .fileUpload {
+    display: flex;
+    flex-direction: column;
+}
+form .fileUpload .sub-topic {
+    color: var(--color-white);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+form .fileUpload .sub-topic p {
+    color: #ffffff8c;
+    margin-bottom: 1rem;
+    font-size: 15px;
+}
+form .fileUpload .sub-topic h1 {
+    font-size: 23px;
+}
+
+form .fileUpload .holder p {
+    color: var(--color-white);
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+form .fileUpload .holder {
+    /* background: chartreuse; */
+    cursor: pointer;
+    width: 600px;
+    height: 80px;
+    border: 1px solid var(--lighter-blue);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    transition: .2s ease-in-out;
+    margin-bottom: 1rem;
+}
+form .fileUpload .holder:hover {
+    border: 1px solid var(--color-success);
+    box-shadow: var(--box-shadow);
+}
+form .fileUpload .holder input {
+    color: var(--color-white);
+    height: fit-content;
+}
+
+
+/* photo upload  */
+form .photoupload {
+    display: flex;
+    flex-direction: column;
+}
+form .photoupload .sub-topic {
+    color: var(--color-white);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+form .photoupload .sub-topic p {
+    color: #ffffff8c;
+    margin-bottom: 1rem;
+    font-size: 15px;
+}
+form .photoupload .sub-topic h1 {
+    font-size: 23px;
+}
+
+form .photoupload .holder p {
+    color: var(--color-white);
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+form .photoupload .holder {
+    /* background: chartreuse; */
+    cursor: pointer;
+    width: 600px;
+    height: 80px;
+    border: 1px solid var(--lighter-blue);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    transition: .2s ease-in-out;
+    margin-bottom: 1rem;
+}
+form .photoupload .holder:hover {
+    border: 1px solid var(--color-success);
+    box-shadow: var(--box-shadow);
+}
+form .photoupload .holder input {
+    color: var(--color-white);
+    height: fit-content;
+}
+
+
+
+
+/* Next of Kin */
+form .nextofkin {
+    display: flex;
+    flex-direction: column;
+}
+form .nextofkin .sub-topic {
+    color: var(--color-white);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+form .nextofkin .sub-topic p {
+    color: #ffffff8c;
+    margin-bottom: 1rem;
+    font-size: 15px;
+}
+form .nextofkin .sub-topic h1 {
+    font-size: 23px;
+}
+
+
+form .name .input-field {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: var(--color-white);
+    color: var(--dark-blue);
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+}
+form .addresses .input-field {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: var(--color-white);
+    color: var(--dark-blue);
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+}
+form .num .input-field {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: var(--color-white);
+    color: var(--dark-blue);
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+}
+
+
+/* Preview Part */
+
+
+
+.container {
+    position: relative;
+    transition: filter 0.3s;
+  }
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    z-index: 1; /* Lower than .error and .preview but above other content */
+  }
+  
+  .error, .preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Higher than backdrop */
+    width: 30%;
+    padding: 20px;
+    background: var(--light-blue);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-success);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+  }
+  
+  .preview p, .error p {
+    margin-bottom: 1rem;
+  }
