@@ -285,8 +285,8 @@ form .num .input-field {
 
     .error, .preview {
         position: fixed;
-        top: 40%;
-        left: 40%;
-        width: 50%;
+        top: 50%;
+        left: 50%;
+        width: 90%;
     }
   }
