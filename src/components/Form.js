@@ -150,7 +150,6 @@ const Form = () => {
                                 <p>Upload a vilid documents: Drivers license, Voters card or International Passport</p>
                                 <input type="file" onChange={handleFileChange} require/>
                             </div>
-                            
                         </div>
 
                         
@@ -170,7 +169,7 @@ const Form = () => {
                             {/* next of kin */}
                         <div className="nextofkin">
                             <div className="sub-topic">
-                                <p className="steps">step 1of 4</p>
+                                <p className="steps">step 4 of 4</p>
                                 <h1>Next of Kin</h1>
                             </div>
                             <div className="name">

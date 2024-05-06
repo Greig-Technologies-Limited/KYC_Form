@@ -268,3 +268,25 @@ form .num .input-field {
   .preview p, .error p {
     margin-bottom: 1rem;
   }
+
+  @media screen and (max-width:760px) {
+    /* form .fileUpload {
+        width: 100%;
+    } */
+    form .fileUpload .holder {
+        width: 300px;
+        height: 100px;
+    }
+    form .photoupload .holder {
+        width: 300px;
+        height: 100px;
+    }
+
+
+    .error, .preview {
+        position: fixed;
+        top: 40%;
+        left: 40%;
+        width: 50%;
+    }
+  }
