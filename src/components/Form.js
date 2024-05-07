@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getStorage, ref, uploadBytes } from 'firebase/storage';
+import { useNavigate } from 'react-router-dom';
 import "./Form.css"
 
 // Firebase configuration
@@ -30,6 +31,12 @@ const Form = () => {
     const [photo, setPhoto] = useState(null);
     const [submissionSuccess, setSubmissionSuccess] = useState(false);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+    
+
+    const goToSuccessPage = () => {
+      navigate('./SuccessPage');  // This uses the navigate function
+    };
 
     // 
     const handleBackdropClick = () => {
@@ -59,22 +66,31 @@ const Form = () => {
     };
   
     const validateForm = () => {
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; // Simple email regex
       const requiredFields = [
         'firstName', 'lastName', 'Email', 'Address', 'phoneNumber', 'bvn', 'nin',
         'Next_of_kin_firstName', 'Next_of_kin_lastName', 'Next_of_kin_Email', 'Next_of_kin_Address', 'Next_of_kin_phoneNumber'
       ];
+  
       for (let field of requiredFields) {
-        if (!user[field]) {
+        const value = user[field];
+        if (!value) {
           setError(`Please fill in the ${field.replace(/_/g, ' ')}.`);
           return false;
         }
+        // Specific validation for email fields
+        if ((field === 'Email' || field === 'Next_of_kin_Email') && !emailRegex.test(value)) {
+          setError(`Please enter a valid email address for ${field.replace(/_/g, ' ')}.`);
+          return false;
+        }
       }
+  
       if (!file || !photo) {
         setError("Please upload both the ID and a photo.");
         return false;
       }
-      return true; // All fields are filled
-    };
+      return true; // All fields are filled and valid
+  };
   
     const getdata = async (e) => {
       e.preventDefault();
@@ -111,6 +127,7 @@ const Form = () => {
         setSubmissionSuccess(false);
       }
     };
+    
 
     return (
         <>
@@ -130,7 +147,7 @@ const Form = () => {
                                 <input className='input-field' type="text" name="lastName" placeholder="Last Name" value={user.lastName} autoComplete="off" required onChange={data} require/>
                             </div>
                             <div className="addresses">
-                                <input className='input-field' type="text" name="Email" placeholder="Email" value={user.Email} autoComplete="off" required onChange={data} require/>
+                                <input className='input-field' type="email" name="Email" placeholder="Email" value={user.Email} autoComplete="off" required onChange={data} />
                                 <input className='input-field' type="text" name="Address" placeholder="Address" value={user.Address} autoComplete="off" required onChange={data} require/>
                             </div>
                             <div className="num">
@@ -177,7 +194,7 @@ const Form = () => {
                                 <input className='input-field' type="text" name="Next_of_kin_lastName" placeholder="Last Name" value={user.Next_of_kin_lastName} autoComplete="off" required onChange={data} require/>
                             </div>
                             <div className="addresses">
-                                <input className='input-field' type="text" name="Next_of_kin_Email" placeholder="Email" value={user.Next_of_kin_Email} autoComplete="off" required onChange={data} require/>
+                                <input className='input-field' type="email" name="Next_of_kin_Email" placeholder="Email" value={user.Next_of_kin_Email} autoComplete="off" required onChange={data} />
                                 <input className='input-field' type="text" name="Next_of_kin_Address" placeholder="Address" value={user.Next_of_kin_Address} autoComplete="off" required onChange={data} require/>
                             </div>
                             <div className="num">
@@ -209,6 +226,7 @@ const Form = () => {
                           <p>Email: {user.Next_of_kin_Email}</p>
                           <p>Address: {user.Next_of_kin_Address}</p>
                           <p>Phone Number: {user.Next_of_kin_phoneNumber}</p>
+                          <button onClick={goToSuccessPage}>Done</button>
                         </div>
                     )}
                 </div>
